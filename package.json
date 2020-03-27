@@ -16,7 +16,7 @@
     "homepage": "https://github.com/pavel-mazhuga/lit-dispatcher#readme",
     "scripts": {
         "prepare": "rimraf ./dist && rollup --config",
-        "test": "jest"
+        "test": "jest --passWithNoTests"
     },
     "devDependencies": {
         "@types/jest": "latest",
