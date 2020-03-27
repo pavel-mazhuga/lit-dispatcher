@@ -1,6 +1,6 @@
 {
     "name": "lit-dispatcher",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simple event dispatcher",
     "main": "dist/index.js",
     "repository": {
