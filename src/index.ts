@@ -52,7 +52,7 @@ export default function createLitDispatcher() {
      * @param  {string} eventName
      * @param  {any} data
      */
-    function dispatch(eventName: string, data?: any) {
+    function dispatch<T = any>(eventName: string, data?: T) {
         const event = events[eventName];
 
         if (event) {
