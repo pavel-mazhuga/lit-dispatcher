@@ -1,5 +1,3 @@
-README here
-
 # LitDispatcher
 
 ## A lightweight (< 1kb gzipped) dispatcher. Written in TypeScript.
@@ -8,6 +6,8 @@ README here
 
 Install it from NPM:
 `npm i lit-dispatcher`
+
+**IMPORTANT:** The library's default compilation target is ES6. If you need to support ES5 environments - consider transpiling it.
 
 ## Usage
 

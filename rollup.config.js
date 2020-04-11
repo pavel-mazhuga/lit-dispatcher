@@ -12,8 +12,13 @@ export default {
     input: 'src/index.ts',
     output: [
         {
-            file: pkg.main,
+            file: pkg.module,
             format: 'esm',
+        },
+        {
+            file: pkg.main,
+            format: 'iife',
+            name: 'createLitDispatcher',
         },
     ],
     external,
