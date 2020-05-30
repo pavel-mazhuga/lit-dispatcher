@@ -51,6 +51,16 @@ describe('Lit Dispatcher', () => {
         expect(callback2).toBeCalledTimes(1);
     });
 
+    it('calls callback once', () => {
+        const dispatcher = createLitDispatcher();
+        const callback = jest.fn();
+        dispatcher.once('test-event', callback);
+        dispatcher.dispatch('test-event');
+        dispatcher.dispatch('test-event');
+
+        expect(callback).toBeCalledTimes(1);
+    });
+
     it('does not register the same function to the same event', () => {
         const dispatcher = createLitDispatcher();
         const callback = jest.fn();

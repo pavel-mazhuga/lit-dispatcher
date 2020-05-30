@@ -116,5 +116,18 @@ export default function createLitDispatcher() {
         }
     }
 
-    return { on, off, dispatch };
+    /**
+     * Subscribe to an event and unsubscribe on first execution
+     *
+     * @param  {string} eventName
+     * @param  {Function} callback
+     */
+    function once(eventName: string, callback: (data?: any) => void) {
+        on(eventName, function fn(...args) {
+            off(eventName, fn);
+            callback(...args);
+        });
+    }
+
+    return { on, off, once, dispatch };
 }
